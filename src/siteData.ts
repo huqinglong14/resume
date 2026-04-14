@@ -37,7 +37,7 @@ export const siteData = {
     monogram: "HQL",
     name: "胡庆龙",
     role: "算法工程师 / 计算机视觉方向 / 硕士在读",
-    tagline: "聚焦计算机视觉与 AI 应用落地。",
+    tagline: "聚焦目标检测、OCR、多模态感知与语义分割。",
     intro:
       "河北经贸大学计算机科学与技术硕士在读，本科毕业于兰州大学，持续关注计算机视觉与 AI 应用落地，正在寻找算法工程师、计算机视觉方向的岗位机会。",
     panelTitle: "求职方向",
