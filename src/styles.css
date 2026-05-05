@@ -57,7 +57,7 @@ a {
 .page-shell {
   position: relative;
   overflow: hidden;
-  max-width: 1280px;
+  max-width: 1440px;
   margin: 0 auto;
   padding: 24px 24px 48px;
 }
@@ -144,6 +144,55 @@ a {
   font-size: 0.96rem;
 }
 
+.topbar-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 16px;
+}
+
+.resume-entry {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 14px;
+  border-radius: 999px;
+  background: rgba(255, 251, 247, 0.82);
+  border: 1px solid rgba(99, 64, 46, 0.12);
+  box-shadow: 0 12px 28px rgba(81, 55, 41, 0.08);
+}
+
+.resume-entry:hover {
+  transform: translateY(-2px);
+}
+
+.resume-entry-icon {
+  display: inline-grid;
+  place-items: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #7a3f28 0%, #c0673b 100%);
+  color: #fff8f4;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.resume-entry-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.resume-entry-text strong {
+  font-size: 0.92rem;
+}
+
+.resume-entry-text small {
+  color: var(--text-soft);
+}
+
 .nav a:hover,
 .footer-links a:hover {
   opacity: 0.68;
@@ -195,8 +244,8 @@ a {
 }
 
 .hero-copy h1 {
-  max-width: 10ch;
-  font-size: clamp(3.5rem, 7vw, 6.3rem);
+  max-width: 9ch;
+  font-size: clamp(3.2rem, 6.2vw, 5.4rem);
 }
 
 .hero-text {
@@ -301,6 +350,32 @@ a {
   border: 1px solid rgba(98, 64, 48, 0.08);
 }
 
+.resume-panel-card {
+  display: grid;
+  gap: 18px;
+  padding: 24px;
+  border-radius: 28px;
+  background: rgba(255, 250, 245, 0.82);
+  border: 1px solid rgba(98, 64, 48, 0.08);
+}
+
+.resume-panel-copy h3,
+.resource-card h3 {
+  margin: 10px 0 8px;
+  font-size: 1.3rem;
+}
+
+.resume-panel-copy p,
+.resource-card p {
+  color: var(--text-soft);
+}
+
+.resume-panel-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
 .profile-list li,
 .highlight-list li,
 .project-points li {
@@ -368,6 +443,23 @@ a {
 .timeline {
   display: grid;
   gap: 18px;
+}
+
+.journey-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.journey-column {
+  display: grid;
+  gap: 18px;
+}
+
+.journey-column-head h3 {
+  margin: 0;
+  font-size: 1.8rem;
+  letter-spacing: -0.03em;
 }
 
 .about-card,
@@ -451,6 +543,61 @@ a {
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
+.resource-intro {
+  max-width: 30rem;
+  color: var(--text-soft);
+}
+
+.resources-grid {
+  display: grid;
+  gap: 18px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.resource-card {
+  display: grid;
+  gap: 18px;
+  padding: 28px;
+  border-radius: 32px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(20px);
+}
+
+.resource-card-head p {
+  margin: 0;
+}
+
+.resource-links {
+  display: grid;
+  gap: 12px;
+}
+
+.resource-link {
+  display: grid;
+  gap: 6px;
+  padding: 18px 20px;
+  border-radius: 22px;
+  background: rgba(255, 251, 247, 0.76);
+  border: 1px solid rgba(98, 64, 48, 0.08);
+}
+
+.resource-link:hover {
+  transform: translateY(-2px);
+  border-color: rgba(169, 82, 45, 0.28);
+  background: rgba(255, 252, 249, 0.92);
+}
+
+.resource-link strong {
+  font-size: 1rem;
+}
+
+.resource-link span {
+  color: var(--text-soft);
+  font-size: 0.94rem;
+}
+
 .timeline {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
@@ -514,6 +661,8 @@ a {
   .section-grid,
   .project-grid,
   .skills-grid,
+  .resources-grid,
+  .journey-grid,
   .timeline,
   .education-grid {
     grid-template-columns: 1fr;
@@ -535,9 +684,18 @@ a {
     border-radius: 22px;
   }
 
+  .topbar-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
   .nav {
     gap: 12px;
     font-size: 0.9rem;
+  }
+
+  .resume-entry {
+    justify-content: center;
   }
 
   .hero-copy,
@@ -558,6 +716,16 @@ a {
 
   .stats-grid {
     grid-template-columns: 1fr;
+  }
+
+  .resume-panel-actions,
+  .contact-links {
+    flex-direction: column;
+  }
+
+  .resource-card {
+    padding: 24px;
+    border-radius: 26px;
   }
 
   .footer {
