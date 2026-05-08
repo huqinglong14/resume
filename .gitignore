@@ -3,3 +3,5 @@ dist
 *.tsbuildinfo
 vite.config.js
 vite.config.d.ts
+_tmp_read_resume.py
+_tmp_read_resume_unicode.py

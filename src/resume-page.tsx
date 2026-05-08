@@ -149,7 +149,6 @@ function ResumePage() {
           <div className="resume-card-grid">
             {skillGroups.map((group) => (
               <article className="resume-card" key={group.title}>
-                <span>{group.title}</span>
                 <h4>{group.title}</h4>
                 <div className="resume-chip-grid">
                   {group.items.map((item) => (
